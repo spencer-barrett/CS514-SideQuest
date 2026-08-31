@@ -1,0 +1,61 @@
+.centered {
+    height: 100%;
+    width: 100%;
+   
+    background-color: #2D2E2E;
+    background-image: url('../assets/food-bg.jpg');
+    background-size: cover;
+    background-position: center;;
+
+}
+
+.blur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+
+body{
+    margin: 0;
+    font-family: "Inter";
+}
+
+h1 {
+    font-weight: 800;
+    color: #EE2F36;
+    font-size: 4rem;
+}
+
+h2{
+    font-weight: 400;
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+.form {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#email {
+    border-radius: 20px;
+}
