@@ -2,14 +2,14 @@
 
 This project uses a simple branch-and-pull-request workflow.
 
-The goal is to keep `main` stable while allowing everyone to work independently on features, fixes, documentation, and other tasks.
+The goal is to keep `master` stable while allowing everyone to work independently on features, fixes, documentation, and other tasks.
 
 ---
 
 ## Quick Reference
 
 ```bash
-git checkout main
+git checkout master
 git pull
 git checkout -b feature/my-feature
 
@@ -20,16 +20,16 @@ git commit -m "Describe your change"
 git push -u origin feature/my-feature
 ```
 
-Then open a pull request on GitHub from your branch into `main`.
+Then open a pull request on GitHub from your branch into `master`.
 
 ---
 
 ## 1. Get the Latest Version of the Project
 
-Before starting new work, make sure your local copy of `main` is up to date.
+Before starting new work, make sure your local copy of `master` is up to date.
 
 ```bash
-git checkout main
+git checkout master
 git pull
 ```
 
@@ -39,7 +39,7 @@ This helps reduce merge conflicts and ensures you are starting from the latest v
 
 ## 2. Create a New Branch
 
-Do not work directly on `main`.
+Do not work directly on `master`.
 
 Create a new branch for the task you are working on.
 
@@ -197,7 +197,7 @@ After pushing your branch, open a pull request on GitHub.
 4. Set the base branch to:
 
 ```text
-main
+master
 ```
 
 5. Select your branch as the compare branch.
@@ -238,10 +238,10 @@ The existing pull request will automatically update when new commits are pushed 
 
 ## 10. Keep Your Branch Updated
 
-If `main` changes while you are still working on your branch, update your local `main`:
+If `master` changes while you are still working on your branch, update your local `master`:
 
 ```bash
-git checkout main
+git checkout master
 git pull
 ```
 
@@ -251,10 +251,10 @@ Then return to your branch:
 git checkout feature/user-login
 ```
 
-Merge the latest `main` into your branch:
+Merge the latest `master` into your branch:
 
 ```bash
-git merge main
+git merge master
 ```
 
 If Git reports merge conflicts, resolve them before continuing.
@@ -265,10 +265,10 @@ If you are unsure how to resolve a conflict, ask another team member before maki
 
 ## 11. After Your Pull Request Is Merged
 
-Once your pull request has been merged, switch back to `main`:
+Once your pull request has been merged, switch back to `master`:
 
 ```bash
-git checkout main
+git checkout master
 git pull
 ```
 
@@ -305,16 +305,16 @@ Small and focused pull requests are easier to review than large pull requests co
 
 ## General Git Guidelines
 
-### Do Not Commit Directly to `main`
+### Do Not Commit Directly to `master`
 
 All development work should happen on a separate branch and be merged through a pull request.
 
 ### Pull Before Starting New Work
 
-Always begin new work from the latest version of `main`.
+Always begin new work from the latest version of `master`.
 
 ```bash
-git checkout main
+git checkout master
 git pull
 ```
 
