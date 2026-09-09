@@ -34,6 +34,7 @@
 │   │   │       └── global.css
 │   │   └── tsconfig.json
 │   └── web
-└── directories.md
+├── directories.md
+└── docs
 
-13 directories, 23 files
+14 directories, 23 files
