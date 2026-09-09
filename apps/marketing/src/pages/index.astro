@@ -3,10 +3,10 @@ import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import Layout from "../layouts/Layout.astro";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
 ---
-
+<script src="../scripts/interest-form.ts"></script>
 <!-- TODO: Consolidate styling where needed. Right now vanilla CSS is being mixed with tailwindCSS -->
-
 <Layout>
   <main class="hero">
     <div class="overlay"></div>
@@ -42,19 +42,3 @@ import { Button } from "@/components/ui/button";
   </main>
 </Layout>
 
-<script>
-  const form = document.querySelector<HTMLFormElement>("#interest-form");
-  const button = form?.querySelector<HTMLButtonElement>(
-    "button[type='submit']",
-  );
-
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    form.reset();
-    if (button) {
-      button.textContent = "You're in!";
-      button.disabled = true;
-    }
-  });
-</script>
