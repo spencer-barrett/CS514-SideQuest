@@ -25,3 +25,7 @@ This is the parent repository for our semester-long group project, SideQuest. It
 ### Documentation
 
 - `docs` — Contains project documentation, architectural notes, and other supporting materials.
+
+## Contributing
+
+Before contributing to SideQuest, please review the [Contributing Guidelines](CONTRIBUTING.md) for the project's branching, commit, pull request, and review workflow.
