@@ -1,24 +1,60 @@
 ---
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import Layout from "../layouts/Layout.astro";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 ---
 
-<Layout>
-  <div class="centered">
-    <div class="blur">
-      <h1>
-        Side<span style="color: white">Quest</span>
-      </h1>
-      <h2>Coming Soon</h2>
+<!-- TODO: Consolidate styling where needed. Right now vanilla CSS is being mixed with tailwindCSS -->
 
-      <!-- <form>
-		<div class="form-wrapper">
-          <div class="form">
-            <label for="email">Be first to Join!</label>
-            <input type="email" id="email" name="email" placeholder="Email"/>
-          </div>
-		  <button>Submit</button>
-		  </div>
-        </form> -->
+<Layout>
+  <main class="hero">
+    <div class="overlay"></div>
+    <div class="content gap-6">
+      <div>
+        <h1>
+          Side<span>Quest</span>
+        </h1>
+        <h2 class="uppercase">Coming Soon</h2>
+      </div>
+
+      <form id="interest-form">
+        <div class="flex w-100">
+          <FieldGroup>
+            <Field>
+              <FieldLabel>Be first to join!</FieldLabel>
+              <Input
+                type="email"
+                placeholder="email"
+                name="email"
+                className="text-white!"
+              />
+              <div class="w-full mt-4">
+                <Button className="w-1/2 bg-[#ee2f36]" type="submit"
+                  >Submit</Button
+                >
+              </div>
+            </Field>
+          </FieldGroup>
+        </div>
+      </form>
     </div>
-  </div>
+  </main>
 </Layout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("#interest-form");
+  const button = form?.querySelector<HTMLButtonElement>(
+    "button[type='submit']",
+  );
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    form.reset();
+    if (button) {
+      button.textContent = "You're in!";
+      button.disabled = true;
+    }
+  });
+</script>
