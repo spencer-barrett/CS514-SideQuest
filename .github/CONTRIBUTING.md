@@ -337,7 +337,7 @@ Avoid:
 ```text
 test
 new
-spencer-branch
+<your-name>-branch
 stuff
 final-final
 ```
@@ -435,6 +435,36 @@ Check with the team before making large changes involving:
 Small implementation decisions generally do not require prior approval.
 
 When in doubt, create an issue or ask the team before beginning a large change.
+
+---
+
+## If You Accidentally Commit to `master`
+
+If you make commits locally on `master` and GitHub rejects your push because `master` is protected, your work is not lost.
+
+Create a new branch from your current state:
+
+```bash
+git checkout -b feature/my-feature
+```
+
+Then push the new branch:
+
+```bash
+git push -u origin feature/my-feature
+```
+
+After that, open a pull request from your new branch into `master`.
+
+Once your pull request is created, return your local `master` branch to match the remote:
+
+```bash
+git checkout master
+git fetch origin
+git reset --hard origin/master
+```
+
+Only run the `reset --hard` command after confirming your work exists safely on the new branch.
 
 ---
 
